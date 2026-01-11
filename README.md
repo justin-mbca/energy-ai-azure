@@ -1,22 +1,3 @@
-## Azure ML Workflow (Mermaid Diagram)
-
-```mermaid
-graph TD
-  A[Data Ingestion] --> B[Feature Engineering]
-  B --> C[Azure ML Experiment Tracking]
-  C --> D[Model Training (TFT, LLM, RAG)]
-  D --> E[Model Deployment (Azure ML Endpoint)]
-  E --> F[Monitoring & Drift Detection]
-  D --> G[Model Cards & Versioning]
-  D --> H[Databricks Feature Store]
-  F --> I[Automated Retraining]
-
-  subgraph "Azure OpenAI"
-    D
-  end
-```
-# Enterprise AI Layered Adaptation (Global Context)
-
 # Enterprise AI Layered Adaptation (Global Context)
 
 This diagram illustrates a global, sector-specific approach to enterprise AI adaptation across Energy, Pharma, and Industrial domains. Each sector is represented as a swimlane, with layers flowing top-down to show the progression from prompt and policy control through to fine-tuning and distillation. The diagram highlights how each sector can leverage a single cloud platform (e.g., Azure for Energy and Pharma, AWS for Industrial) while sharing common architectural patterns and adaptation strategies. Horizontal links indicate shared concepts and best practices across sectors, while vertical flows show the recommended order of adaptation layers for robust, compliant, and domain-optimized AI deployment.
@@ -103,8 +84,10 @@ graph TD
     D --> G[Model Cards & Versioning]
     D --> H[Databricks Feature Store]
     F --> I[Automated Retraining]
-    subgraph Azure OpenAI
-      D
+
+    %% Highlight Model Training as part of Azure OpenAI
+    subgraph Azure_OpenAI ["Azure OpenAI"]
+        D
     end
 ```
 
