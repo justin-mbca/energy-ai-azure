@@ -1,3 +1,20 @@
+## Azure ML Workflow (Mermaid Diagram)
+
+```mermaid
+graph TD
+  A[Data Ingestion] --> B[Feature Engineering]
+  B --> C[Azure ML Experiment Tracking]
+  C --> D[Model Training (TFT, LLM, RAG)]
+  D --> E[Model Deployment (Azure ML Endpoint)]
+  E --> F[Monitoring & Drift Detection]
+  D --> G[Model Cards & Versioning]
+  D --> H[Databricks Feature Store]
+  F --> I[Automated Retraining]
+
+  subgraph "Azure OpenAI"
+    D
+  end
+```
 # Enterprise AI Layered Adaptation (Global Context)
 
 # Enterprise AI Layered Adaptation (Global Context)
