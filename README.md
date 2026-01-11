@@ -76,19 +76,20 @@ Energy companies face unique challenges in production forecasting, supply chain 
 
 ```mermaid
 graph TD
-    A[Data Ingestion] --> B[Feature Engineering]
-    B --> C[Azure ML Experiment Tracking]
-    C --> D[Model Training (TFT, LLM, RAG)]
-    D --> E[Model Deployment (Azure ML Endpoint)]
-    E --> F[Monitoring & Drift Detection]
-    D --> G[Model Cards & Versioning]
-    D --> H[Databricks Feature Store]
-    F --> I[Automated Retraining]
+    A["Data Ingestion"] --> B["Feature Engineering"]
+    B --> C["Azure ML Experiment Tracking"]
+    C --> D["Model Training - TFT, LLM, RAG"]
+    D --> E["Model Deployment - Azure ML Endpoint"]
+    E --> F["Monitoring & Drift Detection"]
+    D --> G["Model Cards & Versioning"]
+    D --> H["Databricks Feature Store"]
+    F --> I["Automated Retraining"]
 
     %% Highlight Model Training as part of Azure OpenAI
-    subgraph Azure_OpenAI ["Azure OpenAI"]
+    subgraph Azure_OpenAI["Azure OpenAI"]
         D
     end
+
 ```
 
 ## Quick Start
