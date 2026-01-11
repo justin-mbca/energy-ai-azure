@@ -1,0 +1,14 @@
+name: energy-ai-azure
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - pytorch-lightning
+  - scikit-learn
+  - pandas
+  - matplotlib
+  - seaborn
+  - mlflow

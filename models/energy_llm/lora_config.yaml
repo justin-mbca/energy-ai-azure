@@ -1,0 +1,6 @@
+base_model: meta-llama/Llama-3.1-8B
+lora:
+  r: 16
+  lora_alpha: 32
+  target_modules: ["q_proj", "v_proj"]
+quantization: QLoRA (4-bit)

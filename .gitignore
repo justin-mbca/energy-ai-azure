@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv
+.envrc
+.ipynb_checkpoints/
+.DS_Store
+# Azure ML
+aml_config/
+# VSCode
+.vscode/
+# Data
+/data/*.csv
+/data/*.parquet
+/data/*.xlsx
+# Models
+/models/*/checkpoints/
+/models/*/outputs/
+# Notebooks
+notebooks/.ipynb_checkpoints/

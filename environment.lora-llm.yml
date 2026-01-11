@@ -1,0 +1,16 @@
+name: lora-llm
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - torch>=2.1.0
+      - transformers>=4.35.0
+      - accelerate>=0.21.0
+      - lightning>=2.1.0
+      - peft>=0.8.2
+      - bitsandbytes
+      - datasets
+      - python-dotenv

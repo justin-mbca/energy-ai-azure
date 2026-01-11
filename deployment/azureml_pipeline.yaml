@@ -1,0 +1,19 @@
+# Azure ML pipeline definition (simplified)
+
+name: energy-ai-azure-pipeline
+steps:
+  - name: TrainModel
+    script: ../models/production_forecasting/train.py
+    compute: cpu-cluster
+    outputs:
+      model: tft_model.pth
+  - name: EvaluateModel
+    script: ../models/production_forecasting/evaluate.py
+    inputs:
+      model: tft_model.pth
+    compute: cpu-cluster
+  - name: DeployModel
+    script: ../models/production_forecasting/deploy_azureml.py
+    inputs:
+      model: tft_model.pth
+    compute: cpu-cluster
